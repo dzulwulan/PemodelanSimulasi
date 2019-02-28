@@ -35,13 +35,14 @@ teta = math.radians(60) # Inisialisasi teta
 x = [] # Inisialisasi array x untuk menampung x(t)
 y = [] # Inisialisasi array y untuk menampung y(t)
 t_total = t_tot(v0,teta) # Menghitug t total untuk patokan perulangan
-for t in loop_range(0, t_total, 0.01): # Melakukan perulangan dengan range 0 - t_total dengan beda 0,01
+for t in loop_range(0, t_total, 0.1): # Melakukan perulangan dengan range 0 - t_total dengan beda 0,01
     x.append(x_t(v0,t,teta)) # Menghitung dan menambahkan x(t) ke dalam array x
     y.append(y_t(v0,t,teta)) # Menghitung dan menambahkan y(t) ke dalam array y
 
 # print(y)
 plt.plot(x,y) # Membuat grafik
 plt.grid()
+plt.axis([0, 30, 0, 30])
 print(x_tot(v0,teta))
 print(y_tot(v0,teta))
 plt.show() # Menampilkan grafik
